@@ -1,0 +1,16 @@
+RC=rrc
+
+MODEL="x5"
+NETHOST="localhost"
+
+FLAGS= -net=${NETHOST} -I -workfollow=./.richilab/.workfollow -o ${RCNAME}
+SRCS = ./network/* \
+             ./rcm_src/* 
+
+all:
+    ${RC} ${FLAGS} ${FLAGS} ** debug 
+
+clean:
+    ${rm -rf &&DBG_MODE:all}
+
+ 
