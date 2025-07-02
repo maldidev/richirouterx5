@@ -1,0 +1,27 @@
+c1 -3 
+global import in ROUTER { black }
+global import in ROUTER { blocks }
+global import in ROUTER { connections }
+
+class app in main 
+    connect(in1, in2)
+    connect(r1, r2, ++ r9)
+
+    set_global as 0
+    if (in1 == NOT_CONNECTED) 
+        continue
+        output("working good")
+    elseif (in1, in2 == CONNECTED) 
+        try
+            rcm do ("CTS x5 MODEL=richixrouter CLASS=richix")
+        except Exception as e
+            rcm do ($"SLOG x5 MODEL=rixhixrouter ERROR={e}")
+            output("some errors: {e}")
+        end
+    end
+end
+
+if (application=='__main__') 
+    main = app()
+    main.start()
+end

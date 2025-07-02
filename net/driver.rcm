@@ -1,0 +1,42 @@
+[bits 16]
+start:
+    AA 55 XA 0
+    DRV 0, .RCM_DRV_RCIH
+    .start AA global _start
+    global AA 55 ,n >x
+
+    ab 0, DRV
+    ab 1, XAA
+
+    CDRV .0sdrv .router
+    AA CDRV
+
+    ab 1, CDRV
+    ab 1, AA* CDRV
+    lg 1, CDRV AA *
+
+router:
+    BLOCK1 in .a 
+    BLOCK2 in .a1 
+
+    ABLOCK in .a9 
+
+    PRV net 0 AA X87 _++ $-
+    connections:
+        boot AA sc - += $- msg 
+        boot XA sc - += $- msg
+        SC syscall .router
+
+        A blk 0 1 3 5 i 3 7 1 8 9 3 1 6
+        81 63 91 64 92 74 19 45
+        95 72 16 48 13 67 14 91
+
+        a0 dvm ax 01 _r 
+        boot dvm , a0
+
+data:
+    global .router A 0
+    ab router , $-exec 2o
+    ab start , $-exec 1e
+
+    int 0 aa ds xii

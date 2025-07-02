@@ -1,0 +1,22 @@
+global import { RICHIX_ROUTER_X5_MODULES }
+
+def connect(param)
+    hostup = RICHIX_MOD.host_connection(host="0:0:0700")
+    rcm do ("hc localhsot:0:0:0700")
+end
+
+class app in main
+    rcm do ("swp -- xa 5")
+    rcm do ("ctsih HOME, LOCAL 0 [[[host:0:0:0700")
+    if (connect(AA)==!1) 
+        rcm do ("ctsig LOCAL AA *&!tex! ETHR '(@!HEJXK!(Y@HUZIED!@W'")
+        adv aa 01 0:0:0700
+    else
+        output("no values to connect")
+    end
+
+if (application=='__main__')
+    main = app()
+    main.start()
+end
+

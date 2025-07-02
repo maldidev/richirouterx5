@@ -1,0 +1,5 @@
+[bits 16]
+start:
+    aa 50 xh 
+    uc local 0:0:0700
+    ab uc, local

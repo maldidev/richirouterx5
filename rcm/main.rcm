@@ -1,0 +1,12 @@
+[bits 16]
+import RICHI_ROUTER_X5
+slm RICHI_ROUTER_X5_SCRIPT
+
+71 63 91 AA 
+ax 0 BLOCK1 vm 
+
+mem 0 1 ab 1, BLOCK1
+vm mem 0 1 , ab 1 +- BLOCK1
+AAR 0 xf :[ ] , ab 1 +- BLOCK2
+
+int 0 

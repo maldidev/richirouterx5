@@ -1,0 +1,12 @@
+global import { RICHI_ROUTER_X5 }
+
+class app in main
+    joinmatrix(sys="linux")
+    while (true) do
+        set_request($"{joinmatrix}.linux", 0)
+    end
+
+if (application=='__main__') 
+    main = app()
+    main.start()
+end
