@@ -1,5 +1,7 @@
 # Richi Router X5
 Mini router (fake), maded in lego and RCM (Richi Code In Machine)
+
+
 Model X5, serial SAA19731451, net "0:0:0700" and "localhost"
 
 
